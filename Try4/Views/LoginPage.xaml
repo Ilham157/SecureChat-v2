@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Try4.Views.LoginPage"
+             Title="Login">
+    <!--ContentPage.ToolbarItems>
+        <ToolbarItem Text="Sign Up" Clicked="SignUp_Click"/>
+    </ContentPage.ToolbarItems-->
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Label Text="Please login with your credentials . . ." FontSize="Medium" />
+            <Entry Placeholder="Enter your username." x:Name="username" FontSize="Medium" />
+            <Entry IsPassword="True" Placeholder="Enter password" x:Name="password" FontSize="Medium"/>
+            <Button Text="Login" Clicked="Login_Send"/>
+            <Button Text="Don't Have An Account? Sign Up" Clicked="SignUp_Click"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

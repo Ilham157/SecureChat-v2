@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Try4.Views.NewChat"
+             Title="New Chat">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Back" Clicked="OnClick_Back"/>
+    </ContentPage.ToolbarItems>
+    <StackLayout Padding="10">
+        <Label Text="Start a new Chat" FontSize="Medium" />
+        <Entry Placeholder="Who would you like to chat with . . ." x:Name="receiver" FontSize="Medium" />
+        <Button Text="Start Chat" Clicked="NewChat_Send"/>
+        <Label Text="Or start a new secret chat!" FontSize="Medium" />
+        <Entry Placeholder="Who would you like to chat with . . ." x:Name="secretreceiver" FontSize="Medium" />
+        <Button Text="Start Secret Chat" Clicked="NewSecret_Send"/>
+    </StackLayout>
+</ContentPage>

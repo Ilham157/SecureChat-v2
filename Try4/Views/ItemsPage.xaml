@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="Chatapp"
+             x:Class="Try4.Views.ItemsPage">
+    <TabbedPage.ToolbarItems>
+        <ToolbarItem Text="New" Clicked="NewChat_Clicked" />
+    </TabbedPage.ToolbarItems>
+    <!--Pages can be added as references or inline-->
+    <ContentPage Title="Direct" >
+        <!--RefreshView IsRefreshing="{Binding Busy, Mode=TwoWay}" Command="{Binding LoadChatCells}">
+            <ListView x:Name="displayChats"
+                ItemsSource="{Binding Chats}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Padding="10">
+                            
+                                <Grid Padding="10">
+                                    <Label Text="{Binding Name}" HorizontalOptions="Start" FontSize="Medium" />
+                                    <Label Grid.Column="1" Text="{Binding Date}" HorizontalOptions="End" FontSize="Small"/>
+                                </Grid>
+                            
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="OnChat_Selected"></TapGestureRecognizer>
+                            </StackLayout.GestureRecognizers>
+                        </StackLayout>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </-->
+        <ListView x:Name="displayChat" ItemTapped="OnChat_Selected">
+            <!--ItemTapped="OnChat_Selected"-->
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="10">
+                            <Label Text="{Binding Name}" HorizontalOptions="Start" FontSize="Medium" />
+                            <Label Grid.Column="1" Text="{Binding Date}" HorizontalOptions="End" FontSize="Small"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            <!--ListView.GestureRecognizers>
+                <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="OnChat_Selected"></TapGestureRecognizer>
+            </ListView.GestureRecognizers-->
+        </ListView>
+    </ContentPage>
+
+    <ContentPage Title="Secret" >
+        <ListView x:Name="displaySecret" ItemTapped="OnSecret_Selected">
+            <!--ItemTapped="OnChat_Selected"-->
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="10">
+                            <Label Text="{Binding Name}" HorizontalOptions="Start" FontSize="Medium" />
+                            <Label Grid.Column="1" Text="{Binding Date}" HorizontalOptions="End" FontSize="Small"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            <!--ListView.GestureRecognizers>
+                <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="OnChat_Selected"></TapGestureRecognizer>
+            </ListView.GestureRecognizers-->
+        </ListView>
+    </ContentPage>
+
+</TabbedPage>
